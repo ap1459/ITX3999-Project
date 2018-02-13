@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+<?xml-stylesheet type="text/xsl" href="../rss/rss-stylesheet.xsl" ?>
+
+<channel>
+    <title>W3Schools Home Page</title>
+    <link>https://www.w3schools.com</link>
+    <description>Free web building tutorials</description>
+    <language>en-us</language>
+    <image>
+        <title>Title of Video here</title>
+        <link>Website url here</link>
+        <url>Actual image link here</url>
+        <width></width>
+        <height></height>
+    </image>
+    
+    
+
+<item> <!-- this changes when sites update-->
+    <title>RSS Tutorial</title>
+    <pubDate>Date of publication</pubDate>
+    <link>https://www.w3schools.com/xml/xml_rss.asp</link>
+    <description>New RSS tutorial on W3Schools</description>
+    <description><![CDATA[Visit this <a href="www.w3schools.com">link</a> to my website!]]></description>
+    <!--Above is C DATA code that contains info regarding changes -->
+</item>
+</channel>
+
+</rss> 
