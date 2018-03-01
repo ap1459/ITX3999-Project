@@ -1,30 +1,35 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0">
-<?xml-stylesheet type="text/xsl" href="../rss/rss-stylesheet.xsl" ?>
+<?xml-stylesheet type="text/css" href="css/stylesheet.css" ?>
 
 <channel>
+    <item>
     <title>W3Schools Home Page</title>
     <link>https://www.w3schools.com</link>
     <description>Free web building tutorials</description>
     <language>en-us</language>
     <image>
-        <title>Title of Video here</title>
-        <link>Website url here</link>
-        <url>Actual image link here</url>
+        <title>Cyberthreat 2018 aimed at UK cyber security techies</title>
+        <link>http://www.computerweekly.com/news/252435040/Cyberthreat-2018-aimed-at-UK-cyber-security-techies</link>
+        <url></url>
         <width></width>
         <height></height>
     </image>
-    
+    </item>
+
     
 
 <item> <!-- this changes when sites update-->
     <title>RSS Tutorial</title>
-    <pubDate>Date of publication</pubDate>
-    <link>https://www.w3schools.com/xml/xml_rss.asp</link>
-    <description>New RSS tutorial on W3Schools</description>
-    <description><![CDATA[Visit this <a href="www.w3schools.com">link</a> to my website!]]></description>
+    <pubDate>Thu, 27 Apr 2017</pubDate>
+    <link>http://feeds.bbci.co.uk/news/technology/rss.xml</link>
+    <description>BBC Tech news</description>
+    <description><![CDATA[Visit this <a href="http://www.bbc.co.uk/news/technology">link</a> to my website!]]></description>
     <!--Above is C DATA code that contains info regarding changes -->
 </item>
-</channel>
 
+
+
+
+</channel>
 </rss> 

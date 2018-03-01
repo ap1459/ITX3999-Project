@@ -1,0 +1,444 @@
+CSS FINAL PROJ
+
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    background-color:#E4E4E4;
+    background-image:linear-gradient(top, rgb(255, 255, 255) 0%, #E4E4E4 51%);
+    background-image:-webkit-linear-gradient(top, rgb(255, 255, 255) 0%, #E4E4E4 51%);
+    background-image:-ms-linear-gradient(top, rgb(255, 255, 255) 0%, #E4E4E4 51%);
+    background-image:-webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0, rgb(255, 255, 255)),
+        color-stop(0.51, white)
+    );
+    background-attachment:fixed;
+    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-size:12px;
+    height:100%;
+    margin:0px;
+    padding:0px;
+    width:100%;
+
+/* Following code makes the screen fade in and out upon changing page */
+    -webkit-animation:fadein 0.7s; animation:fadein 0.7s } 
+@-webkit-keyframes fadein { from {opacity:0} to {opacity:1} }
+@keyframes fadein { from {opacity:0} to {opacity:1} 
+
+}
+
+/* Landscape layout (with min-width) */
+@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+    .app {
+        background-position:left center;
+        padding:75px 0px 75px 170px;  /* padding-top + padding-bottom + text area = image height */
+        margin:-90px 0px 0px -198px;  /* offset vertical: half of image height */
+                                      /* offset horizontal: half of image width and text area width */
+    }
+}
+
+h1 {
+    font-family:Roboto;
+    font-size:24px;
+    font-weight:normal;
+    margin:20px;
+    overflow:visible;
+    padding:0px;
+    text-align:center;
+}
+
+h3 {
+    font-family:Roboto;
+    text-align: center;
+}
+
+.event {
+    border-radius:4px;
+    -webkit-border-radius:4px;
+    color:#FFFFFF;
+    font-size:12px;
+    margin:0px 30px;
+    padding:2px 0px;
+}
+
+.event.listening {
+    background-color:#333333;
+    display:block;
+}
+
+.event.received {
+    background-color:#4B946A;
+    display:none;
+}
+
+@keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+ 
+@-webkit-keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+ 
+.blink {
+    animation:fade 3000ms infinite;
+    -webkit-animation:fade 3000ms infinite;
+}
+
+p {
+    font-family: Roboto;
+}
+
+a {
+    font-family: Roboto;
+    text-decoration: none;
+    color: black;
+    
+}
+
+/* Splash Screen */
+#splashscreen {
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+
+  
+}
+
+#enterBox {
+
+    background-color: #ffffff;
+    border-color:#3199B1;
+    border-style: solid;
+    border-radius: 20px;
+    float: left;
+    margin: 1.858736059%;
+    padding: 20px 0;
+    text-align: center;
+    width: 29.615861214%;
+    margin-left: 35%;
+    margin-right: auto;   
+}
+
+
+
+
+div.hidden {
+
+    display: none;
+}
+
+/*===============================================================================
+/*=============================Top menu bar======================================
+/*=============================================================================*/
+
+.container1{
+    display: inline-block;    
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    max-width: 35px;
+    height: 3.5px;
+    background-color: rgb(247, 247, 247);
+    margin: 6px 0;
+    transition: 0.4s;
+    left: 5px;
+    position: relative; 
+}
+
+.navbar {
+ 
+    height: 45px;
+    width: 100%;
+    margin: 0 auto; /* makes it stay in the middle */
+    z-index: 2;
+    background-color: #3199B1;
+    position: sticky;
+    font-family:Roboto;
+    font-size:24px;
+    font-weight:normal;
+    overflow:visible;
+    padding:0px;
+    text-align:left;
+}
+
+#menuIcon {
+    float:left;
+    margin: 5px 0px 0px 5px;
+}
+
+#icon {
+    transition: transform 0.3s;
+}
+
+.rotate {
+    -webkit-transform: rotate(80deg);
+    -moz-transform: rotate(80deg);
+    -o-transform: rotate(80deg);
+    -ms-transform: rotate(80deg);
+    transform: rotate(80deg);
+}
+
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+    
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;    
+}
+    
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    font-family: Roboto;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+    
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+    
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+    
+@media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+    }
+}
+
+
+/*---------------------------------------------------------------------------
+/*---------------------------  Footer --------------------------
+/*-------------------------------------------------------------------------*/
+
+
+.footer {  
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 45px;
+    width: 100%;   
+    z-index: 2;
+    background-color: #3199B1;
+    }
+
+#back-arrow {
+    float:left;
+    margin: 10px 0px 0px 5px;
+    width:25px;
+    height:25px;
+}
+
+/* Code to hide footer in landscape */
+/* http://stephen.io/mediaqueries/ */
+
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) 
+and (orientation : landscape) { 
+
+    .footer {
+        visibility: hidden;
+    }
+}
+/*---------------------------------------------------------------------------
+/*---------------------------  box --------------------------
+/*-------------------------------------------------------------------------*/
+
+.box {
+    background-color: #ffffff;
+    border-color:#3199B1;
+    border-style: solid;
+    border-radius: 20px;
+    float: left;
+    margin: 1.858736059%;
+    padding: 20px 0;
+    text-align: center;
+    width: 29.615861214%;
+    margin-left: 35%;
+    margin-right: auto;     
+}
+
+
+
+
+
+
+/* Social Media */
+
+.social-media {
+    display: inline-block;
+}
+
+.social-media img {
+    display:inline-block;
+    margin: 5px 20px;
+    padding:5px;
+    width:  50px;
+    height: 50px;
+}
+
+#social-media-description {
+    text-align: center;
+    padding:20px;
+}
+
+#topic-fb-logo {
+    float: left;
+    width: 45%;
+}
+
+.topic p {
+    margin: 0 10px 0 5px;
+}
+
+#topic-twitter-logo {
+    float: left;
+    width: 45%;
+}
+
+#nextLink {
+    text-decoration: underline;
+    color: blue;
+    font-size: 14px;
+    margin-left: 145px;
+}
+
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) 
+and (orientation : landscape) { 
+
+
+}
+
+
+/* --- XML/RSS Feed CSS --- */
+
+#feed {
+    display: block;
+    background-color: #ffffff;
+    border-color:#3199B1;
+    border-style: solid;
+    border-radius: 20px;
+    margin: 1.858736059%;
+    padding: 20px 0;
+    text-align: center;
+    margin-right: auto;  
+}
+
+#item {
+  display: block;
+  margin-bottom: 30pt;
+}
+
+#title {
+    color: green;
+}
+
+description {
+    color: blue;
+    text-align: center;
+}
+
+channel {
+    text-align: center;
+}
+
+pubDate {
+    color: #3199B1;
+}
+
+
+/* QUIZ */ 
+/* css here */
+
+  
+/* css here */
+
+
+  
+#header {
+    margin-top: 0;
+    border: 2px solid black;
+    padding: 5px;
+    height: 250px;
+    background: beige;
+    background-image: url("code.jpg");
+    color: white;
+    }
+    
+    label {
+        display: block;
+        }
+        
+        input {
+        width: 30px;
+        margin-left: 20px;
+        }
+        
+        h2 {
+        clear: both;
+        padding-top: 20px;
+        }
+        
+        button {
+        width: 100px;
+        margin-top: 20px;
+        }
+    

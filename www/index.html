@@ -38,7 +38,7 @@
     -->
     <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
-    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
     <title>Index</title>
 
     
@@ -57,7 +57,7 @@
 
 
 
-<div id="myNav" class="overlay">
+<div id="myNav" class="overlay"  >
     <a href="#" class="closebtn" onclick="closeNav()">&times;</a>
     <div class="overlay-content">
       <a href="about/about.html">About</a>
@@ -92,14 +92,35 @@
 
 
 
-<body>
+<body onload="splashScreen()";>
+
 <div class="app">
+
+
+<!--
+    <div id="splashscreen">
+        <h2>OSCAR</h2>
+        <img src="../img/oscar-logo.png">
+
+
+    <div id="enterBox">  
+        <a href="#" class="enter_link">Enter on the website</a>
+    </div>  
+    </div>
+-->
+
+
+
+<div id="frontPage">
+
     <h1>Welcome to Oscar!</h1>
     <h3>What would you like to do?</h3>
 
     <div class="box"><a href="topics/topics.html">Topics</a></div>
     <div class="box"><a href="quiz/quiz.html">Quiz</a></div>
     <div class="box"><a href="news/news.html">News</a></div> 
+
+</div>
 </div> 
 
 <!-- <iframe id="rssFeed" name="rssFeed" frameborder="0" src="newsFeed.xml"> Your browser does not support iframes.</iframe> -->
