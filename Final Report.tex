@@ -19,7 +19,7 @@
 
 \section{Abstract}
 
-The following work is the culmination of an academic years worth of work attempting to build a hybrid mobile application on the topic of online safety. It focuses in on particular themes, such as safety in regard to the use of social media, online messengers, and so on. Originally it was to be targeted to a younger audience, though after discussion with a charity, it was deemed more suitable to an audience of secondary school age, and upwards.
+The following work is the culmination of an academic years worth of work attempting to build a hybrid mobile application on the topic of online safety. It focuses in on particular themes, such as safety in regard to the use of social media, online messengers, and so on. Originally it was to be targeted to a younger audience, though after discussion with a charity, it was deemed more suitable to an audience of secondary school age, and upwards. The application also features quizzes to test users learning, as well as an RSS feed to deliver to them the latest news regarding hacks and general IT security developments.
 
 
 \section{Introduction}
@@ -176,7 +176,7 @@ From the experience gained from utilising both native and hybrid development sof
 
 
 
-
+%% FIRST ITERATION ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
@@ -298,7 +298,7 @@ The users stated that they liked the name of the app; they said that found it pa
 \newpage
 
 
-
+%% SECOND ITERATION ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 \section{Second iteration}
 
@@ -306,11 +306,121 @@ At this stage, a basic working-prototype of the application has been created. It
 
 \section{User Requirements}
 
-The users were once again called upon to give their thoughts regarding the application at this stage.
+At this stage in the second iteration, it would be suitable to take the evaluation from the previous iteration in order to identify what the user requirements for this stage are. The following are the requirements as specified in the previous evaluation - 
+
+\begin{itemize}
+	\item The results of the quiz should be graphical and easy to see
+	\item The RSS feed should be on the main page when opening the app
+	\item Some form of menu-bar for quick navigation
+\end{itemize}
+
+These will be taken into account when designing and implementing the application in the following section.
 
 \section{Design \& Implementation}
 
+The prototype application has been created utilising PhoneGap, and has been programmed in HTML, CSS and JavaScript. The screenshots shown have been taken whilst the application has been in use on an iPhone 5S.
+
+The following section will now show and discuss screenshots of the application in its current state.
+
+
+\begin{figure} [H]
+\includegraphics[scale=0.3]{secondIterationHomePage1}
+\centering
+\caption{Home page with RSS feed}
+\label{fig:secondIterationHomePage1}
+\end{figure} 
+
+\begin{figure} [H]
+\includegraphics[scale=0.3]{secondIterationHomePage2}
+\centering
+\caption{Home page scrolled down to show more of the RSS feed}
+\label{fig:secondIterationHomePage2}
+\end{figure} 
+
+The home page was designed to be simple and allow for the user to instantly see what the application had to offer, the three key things being information on topics, the quizzes and the news feed section. The RSS feed was added beneath so if the user wanted to, they could scroll down and browse through, and the main sections were kept at the top so they would be instantly available so the user could decide what they would like to do. \\
+
+\begin{figure} [H]
+\includegraphics[scale=0.3]{secondIterationTopics}
+\centering
+\caption{Topics main page}
+\label{fig:secondIterationTopics}
+\end{figure} 
+
+As shown in Figure~\ref{fig:secondIterationTopics}, the topic section has stayed true to its paper prototype design, maintaining a simple yet effective and easily-followable approach, taking care to ensure the user follows the linear progression of this part of the application. \\
+
+\begin{figure} [H]
+\includegraphics[scale=0.3]{secondIterationTopics2}
+\centering
+\caption{Topics main page}
+\label{fig:secondIterationTopics2}
+\end{figure} 
+
+Figure~\ref{fig:secondIterationTopics2} shows us the next social media page users arrive on after continuing from  Figure~\ref{fig:secondIterationTopics}. The icon list was kept as users expressed this to be more engaging that a dull list of text. Upon clicking on an icon, it will take the user to the corresponding social media topic page wherein it will discuss the social media.
+
+\begin{figure} [H]
+\includegraphics[scale=0.3]{slideMenu}
+\centering
+\caption{Topics main page}
+\label{fig:slideMenu}
+\end{figure} 
+
+Figure~\ref{fig:slideMenu} shows us what the page looks like after the user clicks on the hamburger menu icon in the top left of screen. This icon was chosen for its instantly-recognisable look, to those that have used many mobile applications, and it has the functionality of being able to take the user back to the home page of the app, or to an About page which will feature some basic information regarding who made the application and why. \\
+
+\begin{figure} [H]
+\includegraphics[scale=0.3]{Quiz1}
+\centering
+\caption{Social media quiz}
+\label{fig:Quiz1}
+\end{figure} 
+
+\begin{figure} [H]
+\includegraphics[scale=0.3]{Quiz2}
+\centering
+\caption{Social media quiz}
+\label{fig:Quiz2}
+\end{figure} 
+
+Figure~\ref{fig:Quiz1} and Figure~\ref{fig:Quiz2} show the quiz for social media, which has been kept similar in their straightforward layout just like the paper prototype design, although it was decided that to keep all question on one page instead of multiple pages. This also allowed for the user to look over all their answers at the same time, in order to make changes if they so wish, before submitting. At this moment there are only four questions, and upon evaluation from users, it will be decided if this is a suitable amount for the bitesize knowledge and testing this application offers, or if they believe there should be more questions.
+
+\begin{figure} [H]
+\includegraphics[scale=0.3]{Quiz3}
+\centering
+\caption{Social media quiz results}
+\label{fig:Quiz3}
+\end{figure} 
+
+Figure~\ref{fig:Quiz3} shows us what the current state of the graphical results looks like. Using a Google API, a simple and concise pie chart has been made showing the users score. A pie chart was chosen over any other form of graph as it was felt that users would be able to instantly work out their score whilst other forms of graphs may be confusing.
+
+
+
 \section{Evaluation}
+
+The users were once again called upon to give their thoughts regarding the application at this stage. Users were given the opportunity to use the app via a supplied iPhone 5, and were asked if they felt the app had met, or at least partially met the requirements that were discussed and agreed upon in the first iteration, and these were -
+
+\begin{itemize}
+	\item Do they think the lack of needing to register/make an account is a good thing?
+	\item What they thought about the RSS feed
+	\item If they felt a suitable amount of information was on screen at any one time
+	\item If they felt the app was simple to navigate
+	\item If they liked the way the app looked
+\end{itemize}
+
+Users appreciated the fact they could jump right in and use the app without any form of lengthy sigh-up or registration process. Users liked the inclusion of an RSS feed, though they also stated seeing it now on the home page makes the page look somewhat cluttered, and suggested that perhaps a unique page just for the news feed would be more suitable.
+
+
+ At this stage, the actual text-content of the application uses mostly dummy text, users were still asked if they felt if it seemed a suitable amount, if they liked the font and if it was easy to read, and users stated that it was to a good standard, although perhaps it could be split up more into multiple, easy-to-digest paragraphs. Users appreciated the simple back button in the bottom left corner, though proposed that some form of drop-down menu or or such could be utilised so the users did not have to go through multiple pages to get to a certain page. All three users stated that they liked the way the application looked at this stage, and felt it was similar to the paper prototype, albeit a few different colours here and there, as well as layout changes of the buttons. \\
+
+Users were also given specific tasks to not only test how well the app performed, but also to see if these tasks were straightforward enough to carry out with the current state of the app and its current navigational functionality. Users were asked to - 
+
+\begin{enumerate}
+	\item Navigate to the RSS news feed
+	\item Navigate to the quiz section and complete a quiz
+	\item Find information on a specific topic (i.e. Facebook)
+	\item Once at a specific point in the app, navigate to the home page without using the back button
+	\item All of the above but with the phone in landscape mode
+\end{enumerate}
+
+For task 1, users were all able to find the relevant news section with ease, as it is on the first page when opening up the app. They also saw the option to navigate to the separate page where the RSS feed was also stored, and this was done in order to test if they preferred it on a separate page or not. When asked to complete task 2, users expressed that if the quiz had larger buttons, it would make it easier to operate, though it wasn't a huge issue. They also suggested that perhaps the ability to know which questions they answered incorrectly as opposed to just receiving their overall score would be useful, in order to help them improve.. Task 3 was a pretty straightforward task to complete, users appreciated the use of icons to select a specific social media platform, as they were instantly recognisable and were preferable to a lists of just text. When users were asked to complete task 4, all understood what the hamburger icon at the top left of the screen was used for, they clicked on that and selected 'Home', this therefore being rather straightforward for them to complete and not an alien task given they all use mobile applications regularly. Task 5 had some issues, as not all content aligned effectively in landscape and this therefore requires some more work. When users were asked if they would see themselves using this app in landscape or portrait, they all stated that portrait is how they would use the vast majority of their mobile applications, the notable exception being if they were to watch a video.
 
 
 
