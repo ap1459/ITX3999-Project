@@ -123,3 +123,122 @@ function getXML() {
 
 // scripts here:
 
+ // Load google charts
+ google.charts.load('current', {'packages':['corechart']});
+ google.charts.setOnLoadCallback(drawChart);
+
+ function drawchart1() {
+
+    var data = google.visualization.arrayToDataTable([
+    ["Score", 4]])
+
+    var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+  chart.draw(data, options);
+
+
+    }
+
+// Pie chart for 4/4
+    function piechart1() {
+    var data = [
+            {x:"Correct", value: 4},
+            {x:"Incorrect", value: 0}
+        ]
+        //Make the chart
+        var chart = anychart.pie();
+        //Chart title
+        chart.title("Social Media Quiz Score");
+        //Populate the chart
+        chart.data(data);
+        //Legend position
+        chart.legend().position("right");
+        //Items layout
+        chart.legend().itemsLayout("vertical"); 
+        //Display in relevant Div
+        chart.container("piechart")
+        chart.draw();
+}
+
+// Pie chart for 3/4
+function piechart2() {
+    var data = [
+        {x:"Correct", value: 3},
+        {x:"Incorrect", value: 1}
+    ]
+    //Make the chart
+    var chart = anychart.pie();
+    //Chart title
+    chart.title("Social Media Quiz Score");
+    //Populate the chart
+    chart.data(data);
+    //Legend position
+    chart.legend().position("right");
+    //Items layout
+    chart.legend().itemsLayout("vertical"); 
+    //Display in relevant Div
+    chart.container("piechart")
+    chart.draw();
+}
+
+// Pie chart for 2/4
+function piechart3() {
+    var data = [
+        {x:"Correct", value: 2},
+        {x:"Incorrect", value: 2}
+    ]
+    //Make the chart
+    var chart = anychart.pie();
+    //Chart title
+    chart.title("Social Media Quiz Score");
+    //Populate the chart
+    chart.data(data);
+    //Legend position
+    chart.legend().position("right");
+    //Items layout
+    chart.legend().itemsLayout("vertical"); 
+    //Display in relevant Div
+    chart.container("piechart")
+    chart.draw();
+}
+
+// Pie chart for 1/4
+function piechart4() {
+    var data = [
+        {x:"Correct", value: 1},
+        {x:"Incorrect", value: 3}
+    ]
+    //Make the chart
+    var chart = anychart.pie();
+    //Chart title
+    chart.title("Social Media Quiz Score");
+    //Populate the chart
+    chart.data(data);
+    //Legend position
+    chart.legend().position("right");
+    //Items layout
+    chart.legend().itemsLayout("vertical"); 
+    //Display in relevant Div
+    chart.container("piechart")
+    chart.draw();
+}
+
+// Pie chart for 0/4
+function piechart5() {
+    var data = [
+        {x:"Correct", value: 0},
+        {x:"Incorrect", value: 4}
+    ]
+    //Make the chart
+    var chart = anychart.pie();
+    //Chart title
+    chart.title("Social Media Quiz Score");
+    //Populate the chart
+    chart.data(data);
+    //Legend position
+    chart.legend().position("right");
+    //Items layout
+    chart.legend().itemsLayout("vertical"); 
+    //Display in relevant Div
+    chart.container("piechart")
+    chart.draw();
+}

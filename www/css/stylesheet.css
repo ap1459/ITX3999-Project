@@ -380,6 +380,7 @@ and (orientation : landscape) {
     padding: 20px 0;
     text-align: center;
     margin-right: auto;  
+
 }
 
 #item {
@@ -406,12 +407,6 @@ pubDate {
 
 
 /* QUIZ */ 
-/* css here */
-
-  
-/* css here */
-
-
   
 #header {
     margin-top: 0;
@@ -421,24 +416,43 @@ pubDate {
     background: beige;
     background-image: url("code.jpg");
     color: white;
-    }
+}
     
-    label {
-        display: block;
-        }
+label {
+    display: block;
+}
         
-        input {
-        width: 30px;
-        margin-left: 20px;
-        }
+input {
+    width: 30px;
+    margin-left: 20px;
+}
         
-        h2 {
-        clear: both;
-        padding-top: 20px;
-        }
+h2 {
+    clear: both;
+    padding-top: 20px;
+}
         
-        button {
-        width: 100px;
-        margin-top: 20px;
-        }
+button {
+    width: 100px;
+    margin-top: 20px;
+}
+
+#grade {
+
+    font-family: Roboto;
+
+}
+
+#grade2 {
+
+    font-family: Roboto;
+    text-align: center;
+    font-size: 22px;
+}
     
+#piechart {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }

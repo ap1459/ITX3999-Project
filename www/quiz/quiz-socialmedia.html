@@ -19,11 +19,17 @@
         <title>Topics</title>
     </head>
 
+<!--Google Pie Chart API below -->
+<script src="https://cdn.anychart.com/js/8.0.1/anychart-core.min.js"></script>
+<script src="https://cdn.anychart.com/js/8.0.1/anychart-pie.min.js"></script>
+
 <script type="text/javascript" src="cordova.js"></script>
 <script type="text/javascript" src="../js/index.js"></script>
 <script type="text/javascript">
     app.initialize();
 </script>
+
+
 
 
 
@@ -105,7 +111,7 @@
 
 
 
-        <form id="form1" onsubmit="submit()">
+        <form id="form1" onsubmit="submit()" >
             <fieldset>
                 <h2>What should you do upon recieving a friend request from someone you do not know?</h2>
                 <label><input type="radio" name="question1" value="0" id="var_string" />Accept it</label>
@@ -131,32 +137,67 @@
                 <label><input type="radio" name="question4" value="0" id="var_info" />1 billion</label>
                 <label><input type="radio" name="question4" value="0" id="var_condition"/>3 billion</label>
                 <button type="submit" value="Submit" onsubmit="submit">Submit</button>
-
+                <!-- onclick above disables multiple submission !!!!!!!!!!!!! but messes with app submit-->
                 <p>You scored: <span id="grade">__</span></p>
-                <p id="grade2"></p>
+                <!--<p id="grade2"></p> commented out unitll needed again -->
+                <div id="piechart"></div>
             </fieldset>
 
+           
+<!--
 <footer class="footer">
     <img src="../img/back-arrow.svg" id="back-arrow" onclick="goBack()">
 </footer>
+-->
 </body>
 
-<script>
-        document.getElementById("form1").onsubmit=function() {
 
-        question1 = parseInt(document.querySelector('input[name = "question1"]:checked').value);
-        question2 = parseInt(document.querySelector('input[name = "question2"]:checked').value);
-        question3 = parseInt(document.querySelector('input[name = "question3"]:checked').value);
-        question4 = parseInt(document.querySelector('input[name = "question4"]:checked').value);
-         
-        result = question1 + question2 + question3 + question4; 
-        document.getElementById("grade").innerHTML = result;
-        
-     if (result == 4) {result2 = "Well done!"};
-     document.getElementById("grade2").innerHTML = result2; 
-     
-     return false; // required to not refresh the page; just leave this here
-     } //this ends the submit function
-    </script>
+
+<script>
+
+
+    document.getElementById("form1").onsubmit=function() {
+
+    question1 = parseInt(document.querySelector('input[name = "question1"]:checked').value);
+    question2 = parseInt(document.querySelector('input[name = "question2"]:checked').value);
+    question3 = parseInt(document.querySelector('input[name = "question3"]:checked').value);
+    question4 = parseInt(document.querySelector('input[name = "question4"]:checked').value);
+   
+
+
+// trying to do validation
+//   if (document.getElementById("form1").checked == false) {
+//   document.getElementById("grade2").innerHTML = "Error, try again"; 
+
+//   }
+   
+    
+    
+
+    result = question1 + question2 + question3 + question4; 
+    document.getElementById("grade").innerHTML = result;
+
+
+
+    // Check result
+    if (result == 4) {result2 = piechart1()};
+    if (result == 3) {result2 = piechart2()};
+    if (result == 2) {result2 = piechart3()};
+    if (result == 1) {result2 = piechart4()};
+    if (result == 0) {result2 = piechart5()};
+
+    // Print result
+//    document.getElementById("grade2").innerHTML = result2; 
+    
+
+ 
+    return false; // required to not refresh the page
+    } // End submit function
+
+
+
+</script>
+
+
 
 </html>
