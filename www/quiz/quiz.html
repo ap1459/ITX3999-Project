@@ -1,4 +1,5 @@
 <html>
+    <head>
         <meta charset="utf-8" />
         <meta name="format-detection" content="telephone=no" />
         <meta name="msapplication-tap-highlight" content="no" />
@@ -31,21 +32,19 @@
 <!--===========================================================================
 ============================================================================-->
 
-
-<div id="myNav" class="overlay">
-        <a href="#" class="closebtn" onclick="closeNav()">&times;</a>
-        <div class="overlay-content">
-          <a href="../about/about.html">About</a>
-          <a href="../index.html">Home</a>
-          <a href="#">Settings</a>
-        </div>
-      </div>
-    
-    <nav class="navbar">
-        <div id="menuIcon">
-                <img src="../img/menuIcon.svg" alt="menuIcon" id="icon" onclick="openNav()">
-        </div>
-    </nav>
+<div class="navbar">
+    <div class="hamburger" id="hamburger" onclick="toggleSidenav();">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+<nav>
+    <div class="links">
+        <a href="../mainMenu.html">Home</a>
+        <a href="../about/about.html">About</a>
+    </div>
+</nav>
+</div>
 
 
 
@@ -56,14 +55,28 @@
     <h1>Quizzes</h1>
     <h3>Test your knowledge!</h3>
 
-    <div class="box"><a href="quiz-socialmedia.html">Social Media</a></div>
-    <div class="box"><a href="#">Cyberbullying</a></div>
-    <div class="box"><a href="#">Instant Messengers</a></div> 
+<div class="choice">
+    <a href="quiz-socialmedia.html">
+        <div class="choice-container1">
+            <div class="w3-left"><h4>Social Media</h4></div>
+        </div>
+    </a>
+</div>
+<div class="choice">
+    <a href="quiz-cyberbullying.html">
+        <div class="choice-container2">
+            <div class="w3-left"><h4>Bullying</h4></div>
+        </div>
+    </a>
+</div>
+<div class="choice">
+    <a href="quiz-instantmessenger.html">
+        <div class="choice-container3">
+            <div class="w3-left"><h4>Instant Messenger</h4></div>
+        </div>
+    </a>
 </div> 
-
-
-
-
+</div> 
 
 <footer class="footer">
     <img src="../img/back-arrow.svg" id="back-arrow" onclick="goBack()">

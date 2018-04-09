@@ -1,4 +1,5 @@
 <html>
+    <head>
         <meta charset="utf-8" />
         <meta name="format-detection" content="telephone=no" />
         <meta name="msapplication-tap-highlight" content="no" />
@@ -16,7 +17,7 @@
         <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
         <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
         <link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
-        <title>Topics</title>
+        <title>Social Media Quiz</title>
     </head>
 
 <!--Google Pie Chart API below -->
@@ -38,26 +39,25 @@
 ============================================================================-->
 
 
-<div id="myNav" class="overlay">
-        <a href="#" class="closebtn" onclick="closeNav()">&times;</a>
-        <div class="overlay-content">
-          <a href="../about/about.html">About</a>
-          <a href="../index.html">Home</a>
-          <a href="#">Settings</a>
-        </div>
-      </div>
-    
-    <nav class="navbar">
-        <div id="menuIcon">
-                <img src="../img/menuIcon.svg" alt="menuIcon" id="icon" onclick="openNav()">
-        </div>
-    </nav>
+<div class="navbar">
+    <div class="hamburger" id="hamburger" onclick="toggleSidenav();">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+<nav>
+    <div class="links">
+        <a href="../mainMenu.html">Home</a>
+        <a href="../about/about.html">About</a>
+    </div>
+</nav>
+</div>
 
 
 
 <body>
 
-    <h1>Quiz</h1>
+    <h1>Social Media Quiz</h1>
 <!--
           <table>
           <tr>
@@ -118,24 +118,29 @@
                 <label><input type="radio" name="question1" value="0" id="var_join" />Block the person</label>
                 <label><input type="radio" name="question1" value="1" id="var_info" />Check to see if you know actually them first</label>
                 <label><input type="radio" name="question1" value="0" id="var_condition"/>Ignore</label>
+                <div id="rightOrWrong"></div>
 
                 <h2>In the UK, how old do you have to be to use most social medias, such as Facebook or Twitter?</h2>
                 <label><input type="radio" name="question2" value="1" id="var_string" />13</label>
                 <label><input type="radio" name="question2" value="0" id="var_join" />16</label>
                 <label><input type="radio" name="question2" value="0" id="var_info" />18</label>
                 <label><input type="radio" name="question2" value="0" id="var_condition"/>21</label>
+                <div id="rightOrWrong2"></div>
 
                 <h2>How long do posted pictures last?</h2>
                 <label><input type="radio" name="question3" value="0" id="var_string"/>Until you delete them off your feed</label>
                 <label><input type="radio" name="question3" value="1" id="var_join" />Indefinitely</label>
                 <label><input type="radio" name="question3" value="0" id="var_info"/>A week</label>
                 <label><input type="radio" name="question3" value="0" id="var_condition"/>Ten years</label>
+                <div id="rightOrWrong3"></div>
 
                 <h2>How many people actively use Facebook?</h2>
                 <label><input type="radio" name="question4" value="1" id="var_string" />2.2 billion</label>
                 <label><input type="radio" name="question4" value="0" id="var_join" />1.6 billion</label>
                 <label><input type="radio" name="question4" value="0" id="var_info" />1 billion</label>
                 <label><input type="radio" name="question4" value="0" id="var_condition"/>3 billion</label>
+                <div id="rightOrWrong4"></div>
+
                 <button type="submit" value="Submit" onsubmit="submit">Submit</button>
                 <!-- onclick above disables multiple submission !!!!!!!!!!!!! but messes with app submit-->
                 <p>You scored: <span id="grade">__</span></p>
@@ -152,9 +157,7 @@
 </body>
 
 
-
 <script>
-
 
     document.getElementById("form1").onsubmit=function() {
 
@@ -177,8 +180,6 @@
     result = question1 + question2 + question3 + question4; 
     document.getElementById("grade").innerHTML = result;
 
-
-
     // Check result
     if (result == 4) {result2 = piechart1()};
     if (result == 3) {result2 = piechart2()};
@@ -186,13 +187,50 @@
     if (result == 1) {result2 = piechart4()};
     if (result == 0) {result2 = piechart5()};
 
-    // Print result
-//    document.getElementById("grade2").innerHTML = result2; 
-    
+
+// Validation - Check if answer is correct or not, and let person know
+
+    if (question1 == 1) {
+        document.getElementById("rightOrWrong").innerHTML = ("Correct!");
+        document.getElementById("rightOrWrong").style.color = "green";
+    } else {
+        document.getElementById("rightOrWrong").innerHTML = ("Wrong!");
+        document.getElementById("rightOrWrong").style.color = "red";
+    }
+
+    if (question2 == 1) {
+        document.getElementById("rightOrWrong2").innerHTML = ("Correct!");
+        document.getElementById("rightOrWrong2").style.color = "green";
+    } else {
+        document.getElementById("rightOrWrong2").innerHTML = ("Wrong!");
+        document.getElementById("rightOrWrong2").style.color = "red";
+    }
+
+    if (question3 == 1) {
+        document.getElementById("rightOrWrong3").innerHTML = ("Correct!");
+        document.getElementById("rightOrWrong3").style.color = "green";
+    } else {
+        document.getElementById("rightOrWrong3").innerHTML = ("Wrong!");
+        document.getElementById("rightOrWrong3").style.color = "red";
+    }
+
+    if (question4 == 1) {
+        document.getElementById("rightOrWrong4").innerHTML = ("Correct!");
+        document.getElementById("rightOrWrong4").style.color = "green";
+    } else {
+        document.getElementById("rightOrWrong4").innerHTML = ("Wrong!");
+        document.getElementById("rightOrWrong4").style.color = "red";
+    }
+
 
  
     return false; // required to not refresh the page
     } // End submit function
+
+
+
+
+
 
 
 
@@ -201,3 +239,5 @@
 
 
 </html>
+
+

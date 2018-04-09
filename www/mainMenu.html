@@ -38,33 +38,34 @@
     -->
     <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
-    <link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
-    <link rel="alternate" type="application/rss+xml" href="../newsFeed.xml" title="RSS feed">
-    <script type="text/javascript" src="https://rss2json.com/gfapi.js"></script>
-    <title>Index</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+    <title>Main Menu</title>
+
+    
 </head>
 
 
 <script type="text/javascript" src="cordova.js"></script>
-<script type="text/javascript" src="../js/index.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
 <script type="text/javascript">
     app.initialize();
 </script>
-
 <!-- Refresh stuff above-->
 
-
-
 <div class="navbar">
-    <div class="hamburger" id="hamburger" onclick="toggleSidenav();">
+<div class="hamburger" id="hamburger" onclick="toggleSidenav();">
         <div></div>
         <div></div>
         <div></div>
-    </div>
+</div>
 <nav>
     <div class="links">
-        <a href="../mainMenu.html">Home</a>
-        <a href="../about/about.html">About</a>
+        <a href="mainMenu.html">Home</a>
+        <a href="about/about.html">About</a>
     </div>
 </nav>
 </div>
@@ -72,35 +73,56 @@
 
 
 <body>
+<div class="app">
+
+<div class="choice">
+    <a href="topics/topics.html">
+        <div class="panel">
+            <div class="w3-left"><i class="fa fa-book w3-xxxlarge"></i><h4>Topics</h4></div>
+        </div>
+    </a>
+</div>
+<div class="choice">
+    <a href="quiz/quiz.html">
+        <div class="panel">
+            <div class="w3-left"><i class="fa fa-check w3-xxxlarge"></i><h4>Quiz</h4></div>
+        </div>
+    </a>
+</div>
+<div class="choice">
+    <a href="news/news.html">
+        <div class="panel">
+            <div class="w3-left"><i class="fa fa-newspaper w3-xxxlarge"></i><h4>News</h4></div>
+        </div>
+    </a>
+</div>
     
-    <div class="app">
-        <!--Div containg RSS feed-->
-        <div id="feed"></div>
-        <!--RSS script-->
-        <script type="text/javascript">
-            var content = document.getElementById('feed');
-            var xhr = new XMLHttpRequest();
-            xhr.onreadystatechange = function(){
-                if (xhr.readyState==4 && xhr.status==200)
-                {
-                    var data = JSON.parse(xhr.responseText);
-                    if(data.status == 'ok'){
-                        var output = '<h1>'+data.feed.title+'</h1>';
-                        for(var i=0;i<data.items.length;++i){
-                            output += '<p><h2><a href="' +
-                            data.items[i].link + '" >' +
-                            data.items[i].title + '</h2></a></p>';
-                        }
-                        content.innerHTML = output;
-                    }
-                }
-            };
-            xhr.open('GET','https://api.rss2json.com/v1/api.json?rss_url=https://thehackernews.com/feeds/posts/default?alt=rss',true);
-            xhr.send();
-        </script>
-    <footer class="footer">
-        <img src="../img/back-arrow.svg" id="back-arrow" onclick="goBack()">
-    </footer>
+    
+        
+
+
+
+
+
+</div>
+
+
+
 </div> 
+
+<!-- <iframe id="rssFeed" name="rssFeed" frameborder="0" src="newsFeed.xml"> Your browser does not support iframes.</iframe> -->
+
+
+
+
+
+<!--<footer class="footer"></footer>-->
+
+
+
 </body>
+
+
+
+
 </html>

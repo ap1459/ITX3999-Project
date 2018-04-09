@@ -50,28 +50,8 @@ var app = {
 };
 
 
-//Splash Screen
-function splashScreen() {
-
-}
-
-
 //==============================================================================
 //==============================================================================
-
-function openNav() {
-    document.getElementById("myNav").style.width = "100%";
-    document.getElementById("icon").style.transform = "rotate(90deg)";
-    document.getElementById("icon").style.transition = "all 0.5s";
-   
-}
-
-function closeNav() {
-    document.getElementById("myNav").style.width = "0%";
-    document.getElementById("icon").style.transform = "rotate(-180deg)";
-    document.getElementById("icon").style.transition = "all 0.5s";
-}
-
 
 
 //Method for back button
@@ -80,49 +60,7 @@ function goBack() {
 }
 
 
-
-
-
-
-
-
-function readXML() {
-    var xmlhttp = new XMLHttpRequest();
-    xmlhttp.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200) {
-        myFunction(this);
-      }
-    };
-    xmlhttp.open("GET", "newsFeed.xml", true);
-    xmlhttp.send();
-  }
-
-
-function getXML() {
-
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-           // Typical action to be performed when the document is ready:
-           document.getElementById("xmlData").innerHTML = xhttp.responseText;
-        }
-    };
-    xhttp.open("GET", "../newsFeed.xml", true);
-    xhttp.send();
-}
-
-
-
-
-
-
-
-
-
 // QUIZ
-
-// scripts here:
-
  // Load google charts
  google.charts.load('current', {'packages':['corechart']});
  google.charts.setOnLoadCallback(drawChart);
@@ -133,30 +71,28 @@ function getXML() {
     ["Score", 4]])
 
     var chart = new google.visualization.PieChart(document.getElementById('piechart'));
-  chart.draw(data, options);
-
-
-    }
+    chart.draw(data, options);
+}
 
 // Pie chart for 4/4
     function piechart1() {
     var data = [
-            {x:"Correct", value: 4},
-            {x:"Incorrect", value: 0}
-        ]
-        //Make the chart
-        var chart = anychart.pie();
-        //Chart title
-        chart.title("Social Media Quiz Score");
-        //Populate the chart
-        chart.data(data);
-        //Legend position
-        chart.legend().position("right");
-        //Items layout
-        chart.legend().itemsLayout("vertical"); 
-        //Display in relevant Div
-        chart.container("piechart")
-        chart.draw();
+        {x:"Correct", value: 4},
+        {x:"Incorrect", value: 0}
+    ]
+    //Make the chart
+    var chart = anychart.pie();
+    //Chart title
+    chart.title("Social Media Quiz Score");
+    //Populate the chart
+    chart.data(data);
+    //Legend position
+    chart.legend().position("right");
+    //Items layout
+    chart.legend().itemsLayout("vertical"); 
+    //Display in relevant Div
+    chart.container("piechart")
+    chart.draw();
 }
 
 // Pie chart for 3/4
@@ -242,3 +178,13 @@ function piechart5() {
     chart.container("piechart")
     chart.draw();
 }
+
+
+// For hamburger slide menu
+function toggleSidenav() {
+    document.body.classList.toggle('sidenav-active');
+}
+
+
+
+
