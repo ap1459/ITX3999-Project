@@ -41,6 +41,7 @@
 
 <div class="navbar">
     <div class="hamburger" id="hamburger" onclick="toggleSidenav();">
+        <h3>Social Media Quiz</h3>
         <div></div>
         <div></div>
         <div></div>
@@ -57,125 +58,51 @@
 
 <body>
 
-    <h1>Social Media Quiz</h1>
-<!--
-          <table>
-          <tr>
-            <td>
-                <div id="question">
-                <p class="question">1. Which social media</p>
-                <ul>
-                <input class="answer" type="radio" name="q1" value="1">
-                <label id="correctString1">correct answer 1</label>
-                <br>
-                <input class="answer" type="radio" name="q1" value="0">
-                <label>wrong answer</label>
-                <br>
-                <input class="answer" type="radio" name="q1" value="0">
-                <label>wrong answer</label>
-                <br>
-                <input class="answer" type="radio" name="q1" value="0">
-                <label>wrong answer</label>
-                </ul>
-                </div>
-            </td>
-           
+    <form id="form1" onsubmit="submit()" >
+        <fieldset>
+            <h2>What should you do upon recieving a friend request from someone you do not know?</h2>
+            <label><input type="radio" name="question1" value="0" id="var_string" />Accept it</label>
+            <label><input type="radio" name="question1" value="0" id="var_join" />Block the person</label>
+            <label><input type="radio" name="question1" value="1" id="var_info" />Check to see if you know actually them first</label>
+            <label><input type="radio" name="question1" value="0" id="var_condition"/>Ignore</label>
+            <div id="rightOrWrong"></div>
 
-            </tr>
-          </table>
-      <br/>
+            <h2>In the UK, how old do you have to be to use most social medias, such as Facebook or Twitter?</h2>
+            <label><input type="radio" name="question2" value="1" id="var_string" />13</label>
+            <label><input type="radio" name="question2" value="0" id="var_join" />16</label>
+            <label><input type="radio" name="question2" value="0" id="var_info" />18</label>
+            <label><input type="radio" name="question2" value="0" id="var_condition"/>21</label>
+            <div id="rightOrWrong2"></div>
 
+            <h2>How long do posted pictures last?</h2>
+            <label><input type="radio" name="question3" value="0" id="var_string"/>Until you delete them off your feed</label>
+            <label><input type="radio" name="question3" value="1" id="var_join" />Indefinitely</label>
+            <label><input type="radio" name="question3" value="0" id="var_info"/>A week</label>
+            <label><input type="radio" name="question3" value="0" id="var_condition"/>Ten years</label>
+            <div id="rightOrWrong3"></div>
 
+            <h2>How many people actively use Facebook?</h2>
+            <label><input type="radio" name="question4" value="1" id="var_string" />2.2 billion</label>
+            <label><input type="radio" name="question4" value="0" id="var_join" />1.6 billion</label>
+            <label><input type="radio" name="question4" value="0" id="var_info" />1 billion</label>
+            <label><input type="radio" name="question4" value="0" id="var_condition"/>3 billion</label>
+            <div id="rightOrWrong4"></div>
 
-
-
-        <div class="submitter">
-                <input class="quizSubmit" id="submitButton" onClick="submitQuiz()"
-                type="submit" value="Submit" />
-          </div>
-        -->
-      
-      <!--show only wrong answers on submit
-          <div class="quizAnswers" id="correctAnswer1"></div>
-              <div class="quizAnswers" id="correctAnswer2"></div>
-          <div class="quizAnswers" id="correctAnswer3"></div>
-          <div class="quizAnswers" id="correctAnswer4"></div>
-      
-      show score upon submit
-          <div>
-              <h2 class="quizScore" id="userScore"></h2>
-          </div>
-          </div>
-      
-        -->
-
-
-
-        <form id="form1" onsubmit="submit()" >
-            <fieldset>
-                <h2>What should you do upon recieving a friend request from someone you do not know?</h2>
-                <label><input type="radio" name="question1" value="0" id="var_string" />Accept it</label>
-                <label><input type="radio" name="question1" value="0" id="var_join" />Block the person</label>
-                <label><input type="radio" name="question1" value="1" id="var_info" />Check to see if you know actually them first</label>
-                <label><input type="radio" name="question1" value="0" id="var_condition"/>Ignore</label>
-                <div id="rightOrWrong"></div>
-
-                <h2>In the UK, how old do you have to be to use most social medias, such as Facebook or Twitter?</h2>
-                <label><input type="radio" name="question2" value="1" id="var_string" />13</label>
-                <label><input type="radio" name="question2" value="0" id="var_join" />16</label>
-                <label><input type="radio" name="question2" value="0" id="var_info" />18</label>
-                <label><input type="radio" name="question2" value="0" id="var_condition"/>21</label>
-                <div id="rightOrWrong2"></div>
-
-                <h2>How long do posted pictures last?</h2>
-                <label><input type="radio" name="question3" value="0" id="var_string"/>Until you delete them off your feed</label>
-                <label><input type="radio" name="question3" value="1" id="var_join" />Indefinitely</label>
-                <label><input type="radio" name="question3" value="0" id="var_info"/>A week</label>
-                <label><input type="radio" name="question3" value="0" id="var_condition"/>Ten years</label>
-                <div id="rightOrWrong3"></div>
-
-                <h2>How many people actively use Facebook?</h2>
-                <label><input type="radio" name="question4" value="1" id="var_string" />2.2 billion</label>
-                <label><input type="radio" name="question4" value="0" id="var_join" />1.6 billion</label>
-                <label><input type="radio" name="question4" value="0" id="var_info" />1 billion</label>
-                <label><input type="radio" name="question4" value="0" id="var_condition"/>3 billion</label>
-                <div id="rightOrWrong4"></div>
-
-                <button type="submit" value="Submit" onsubmit="submit">Submit</button>
-                <!-- onclick above disables multiple submission !!!!!!!!!!!!! but messes with app submit-->
-                <p>You scored: <span id="grade">__</span></p>
-                <!--<p id="grade2"></p> commented out unitll needed again -->
-                <div id="piechart"></div>
-            </fieldset>
-
-           
-<!--
-<footer class="footer">
-    <img src="../img/back-arrow.svg" id="back-arrow" onclick="goBack()">
-</footer>
--->
+            <button type="submit" value="Submit" onsubmit="submit">Submit</button>
+            <p>You scored: <span id="grade">__</span></p>
+           <div id="piechart"></div>
+        </fieldset>
 </body>
-
 
 <script>
 
-    document.getElementById("form1").onsubmit=function() {
+document.getElementById("form1").onsubmit=function() {
 
     question1 = parseInt(document.querySelector('input[name = "question1"]:checked').value);
     question2 = parseInt(document.querySelector('input[name = "question2"]:checked').value);
     question3 = parseInt(document.querySelector('input[name = "question3"]:checked').value);
     question4 = parseInt(document.querySelector('input[name = "question4"]:checked').value);
    
-
-
-// trying to do validation
-//   if (document.getElementById("form1").checked == false) {
-//   document.getElementById("grade2").innerHTML = "Error, try again"; 
-
-//   }
-   
-    
-    
 
     result = question1 + question2 + question3 + question4; 
     document.getElementById("grade").innerHTML = result;
@@ -221,23 +148,9 @@
         document.getElementById("rightOrWrong4").innerHTML = ("Wrong!");
         document.getElementById("rightOrWrong4").style.color = "red";
     }
-
-
  
     return false; // required to not refresh the page
-    } // End submit function
-
-
-
-
-
-
-
+} // End submit function
 
 </script>
-
-
-
 </html>
-
-

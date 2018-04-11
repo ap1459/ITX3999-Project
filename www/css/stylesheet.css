@@ -46,7 +46,7 @@ body {
     width:100%;
 
 /* Following code makes the screen fade in and out upon changing page */
-    -webkit-animation:fadein 0.7s; animation:fadein 0.7s } 
+-webkit-animation:fadein 0.7s; animation:fadein 0.7s } 
 @-webkit-keyframes fadein { from {opacity:0} to {opacity:1} }
 @keyframes fadein { from {opacity:0} to {opacity:1} 
 
@@ -64,8 +64,14 @@ h1 {
 }
 
 h3 {
-    font-family:Roboto;
-    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Roboto;
+    color: white;
+    float: right;
+    margin: auto;
+    width: 70%;
+    padding: 5px;
 }
 
 h5 {
@@ -119,38 +125,6 @@ a {
     font-size: 25px;
     
 }
-
-/* Splash Screen */
-#splashscreen {
-
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-
-  
-}
-#enterBox {
-
-    background-color: #ffffff;
-    border-color:#3199B1;
-    border-style: solid;
-    border-radius: 20px;
-    float: left;
-    margin: 1.858736059%;
-    padding: 20px 0;
-    text-align: center;
-    width: 29.615861214%;
-    margin-left: 35%;
-    margin-right: auto;   
-}
-div.hidden {
-
-    display: none;
-}
-
-
-
 
 /* INTRO PAGE */
 /* To center Oscar logo - source here https://stackoverflow.com/questions/6626314/css-center-item-with-positionrelative*/
@@ -317,6 +291,10 @@ and (min-device-width : 320px)
 and (max-device-width : 568px) 
 and (orientation : landscape) { 
 
+    h3 {
+        width: 60%;
+    }
+
     .footer {
         visibility: hidden;
     }
@@ -402,6 +380,7 @@ and (orientation : landscape) {
 .social-media {
     display: table;
     margin: 0 auto;
+    padding-top: 10px;
 }
 
 .social-media img {
@@ -413,14 +392,14 @@ and (orientation : landscape) {
 }
 
 #next-button  {
-    background-color: #ffffff;
-    border-color:#3199B1;
-    border-style: solid;
-    border-radius: 20px;
     max-width: 150px;
     text-align: center;
     margin: 0 auto; /*Centers it*/
     padding: 15px 15px 15px 15px;
+}
+
+#next-button a {
+    color: white;
 }
 
 #social-media-description {
@@ -453,6 +432,7 @@ and (orientation : landscape) {
 .topic img {
     display: table;
     margin: 0 auto;
+    padding-top: 10px;
 }
 
 #topic-reddit-logo {
@@ -473,13 +453,23 @@ and (orientation : landscape) {
 
 }
 
+#cyberbullying-list {
+    list-style-type: none;
+    background: #37aec8;
+    -webkit-filter: drop-shadow(0 0 5px grey);
+    padding: 12px;
+    font-family: roboto;
+}
+
+.firstWord {
+    font-weight: bold;
+    font-size: 14px;
+}
+
 .topic li {
    margin:0 10px 10px 0;   
 }
 
-#cyberbullying-list {
-    padding-bottom:0;
-}
 
 .keyPoints {
     display: block;
@@ -489,7 +479,6 @@ and (orientation : landscape) {
     border-radius: 20px;
     margin: 1.858736059%;
 }
-
 
 @media only screen 
 and (min-device-width : 320px) 
@@ -666,12 +655,13 @@ button {
 
 
 
-
-
-
-
 .panel {
     border-radius: 10px;
+}
+
+.panel-bottom {
+    border-radius: 10px;
+    margin-bottom: 40px;
 }
 
 .choice a {
@@ -680,6 +670,12 @@ button {
 }
 
 .panel:nth-of-type(1) {
+    background: #3199B1;
+    -webkit-filter: drop-shadow(0 0 5px grey);
+    padding: 8px;
+}
+
+.panel-bottom:nth-of-type(1) {
     background: #3199B1;
     -webkit-filter: drop-shadow(0 0 5px grey);
     padding: 8px;

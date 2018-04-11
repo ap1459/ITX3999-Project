@@ -41,6 +41,7 @@
 
 <div class="navbar">
     <div class="hamburger" id="hamburger" onclick="toggleSidenav();">
+        <h3>Cyberbullying</h3>
         <div></div>
         <div></div>
         <div></div>
@@ -56,70 +57,54 @@
 
 
 <body>
+    <form id="form1" onsubmit="submit()" >
+        <fieldset>
+            <h2>What should you do if you are being harrased online?</h2>
+            <label><input type="radio" name="question1" value="0" id="var_string" />Harrass them back</label>
+            <label><input type="radio" name="question1" value="0" id="var_join" />Simply wait for it go away</label>
+            <label><input type="radio" name="question1" value="1" id="var_info" />Report them through the social media</label>
+            <label><input type="radio" name="question1" value="0" id="var_condition"/>Dial 999</label>
+            <div id="rightOrWrong"></div>
 
-    <h1>Cyberbullying</h1>
+            <h2>Saying something slanderous about someone is....</h2>
+            <label><input type="radio" name="question2" value="1" id="var_string" />...never okay</label>
+            <label><input type="radio" name="question2" value="0" id="var_join" />...okay in some circumstances</label>
+            <label><input type="radio" name="question2" value="0" id="var_info" />...necessary if I feel they deserve it</label>
+            <label><input type="radio" name="question2" value="0" id="var_condition"/>...okay regardless of how they'd feel</label>
+            <div id="rightOrWrong2"></div>
 
-        <form id="form1" onsubmit="submit()" >
-            <fieldset>
-                <h2>What should you do if you are being harrased online?</h2>
-                <label><input type="radio" name="question1" value="0" id="var_string" />Harrass them back</label>
-                <label><input type="radio" name="question1" value="0" id="var_join" />Simply wait for it go away</label>
-                <label><input type="radio" name="question1" value="1" id="var_info" />Report them through the social media</label>
-                <label><input type="radio" name="question1" value="0" id="var_condition"/>Dial 999</label>
+            <h2>Cyberbullying can take place online...</h2>
+            <label><input type="radio" name="question3" value="0" id="var_string"/>On social media</label>
+            <label><input type="radio" name="question3" value="1" id="var_join" />In any online environment</label>
+            <label><input type="radio" name="question3" value="0" id="var_info"/>In chat rooms</label>
+            <label><input type="radio" name="question3" value="0" id="var_condition"/>On instant messengers</label>
+            <div id="rightOrWrong3"></div>
 
-                <h2>Saying something slanderous about someone is....</h2>
-                <label><input type="radio" name="question2" value="1" id="var_string" />...never okay</label>
-                <label><input type="radio" name="question2" value="0" id="var_join" />...okay in some circumstances</label>
-                <label><input type="radio" name="question2" value="0" id="var_info" />...necessary if I feel they deserve it</label>
-                <label><input type="radio" name="question2" value="0" id="var_condition"/>...okay regardless of how they'd feel</label>
+            <h2>If you are being "trolled", the correct response is to...</h2>
+            <label><input type="radio" name="question4" value="1" id="var_string" />Not "feed" them</label>
+            <label><input type="radio" name="question4" value="0" id="var_join" />Argue back</label>
+            <label><input type="radio" name="question4" value="0" id="var_info" />Privately message them to stop</label>
+            <label><input type="radio" name="question4" value="0" id="var_condition"/>Swear at them</label>
+            <div id="rightOrWrong4"></div>
 
-                <h2>Cyberbullying can take place online...</h2>
-                <label><input type="radio" name="question3" value="0" id="var_string"/>On social media</label>
-                <label><input type="radio" name="question3" value="1" id="var_join" />In any online environment</label>
-                <label><input type="radio" name="question3" value="0" id="var_info"/>In chat rooms</label>
-                <label><input type="radio" name="question3" value="0" id="var_condition"/>On instant messengers</label>
-
-                <h2>If you are being "trolled", the correct response is to...</h2>
-                <label><input type="radio" name="question4" value="1" id="var_string" />Not "feed" them</label>
-                <label><input type="radio" name="question4" value="0" id="var_join" />Argue back</label>
-                <label><input type="radio" name="question4" value="0" id="var_info" />Privately message them to stop</label>
-                <label><input type="radio" name="question4" value="0" id="var_condition"/>Swear at them</label>
-                <button type="submit" value="Submit" onsubmit="submit">Submit</button>
-                <!-- onclick above disables multiple submission !!!!!!!!!!!!! but messes with app submit-->
-                <p>You scored: <span id="grade">__</span></p>
-                <!--<p id="grade2"></p> commented out unitll needed again -->
-                <div id="piechart"></div>
-            </fieldset>
-
+            <button type="submit" value="Submit" onsubmit="submit">Submit</button>
+            <p>You scored: <span id="grade">__</span></p>
+            <div id="piechart"></div>
+        </fieldset>
 </body>
-
 
 
 <script>
 
-
-    document.getElementById("form1").onsubmit=function() {
+document.getElementById("form1").onsubmit=function() {
 
     question1 = parseInt(document.querySelector('input[name = "question1"]:checked').value);
     question2 = parseInt(document.querySelector('input[name = "question2"]:checked').value);
     question3 = parseInt(document.querySelector('input[name = "question3"]:checked').value);
     question4 = parseInt(document.querySelector('input[name = "question4"]:checked').value);
    
-
-
-// trying to do validation
-//   if (document.getElementById("form1").checked == false) {
-//   document.getElementById("grade2").innerHTML = "Error, try again"; 
-
-//   }
-   
-    
-    
-
     result = question1 + question2 + question3 + question4; 
     document.getElementById("grade").innerHTML = result;
-
-
 
     // Check result
     if (result == 4) {result2 = piechart1()};
@@ -128,18 +113,42 @@
     if (result == 1) {result2 = piechart4()};
     if (result == 0) {result2 = piechart5()};
 
-    // Print result
-//    document.getElementById("grade2").innerHTML = result2; 
-    
+// Validation - Check if answer is correct or not, and let person know
 
+    if (question1 == 1) {
+        document.getElementById("rightOrWrong").innerHTML = ("Correct!");
+        document.getElementById("rightOrWrong").style.color = "green";
+    } else {
+        document.getElementById("rightOrWrong").innerHTML = ("Wrong!");
+        document.getElementById("rightOrWrong").style.color = "red";
+    }
+
+    if (question2 == 1) {
+        document.getElementById("rightOrWrong2").innerHTML = ("Correct!");
+        document.getElementById("rightOrWrong2").style.color = "green";
+    } else {
+        document.getElementById("rightOrWrong2").innerHTML = ("Wrong!");
+        document.getElementById("rightOrWrong2").style.color = "red";
+    }
+
+    if (question3 == 1) {
+        document.getElementById("rightOrWrong3").innerHTML = ("Correct!");
+        document.getElementById("rightOrWrong3").style.color = "green";
+    } else {
+        document.getElementById("rightOrWrong3").innerHTML = ("Wrong!");
+        document.getElementById("rightOrWrong3").style.color = "red";
+    }
+
+    if (question4 == 1) {
+        document.getElementById("rightOrWrong4").innerHTML = ("Correct!");
+        document.getElementById("rightOrWrong4").style.color = "green";
+    } else {
+        document.getElementById("rightOrWrong4").innerHTML = ("Wrong!");
+        document.getElementById("rightOrWrong4").style.color = "red";
+    }
  
     return false; // required to not refresh the page
-    } // End submit function
-
-
+} // End submit function
 
 </script>
-
-
-
 </html>

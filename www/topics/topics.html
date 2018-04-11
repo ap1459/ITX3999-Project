@@ -1,23 +1,24 @@
 <html>
-        <meta charset="utf-8" />
-        <meta name="format-detection" content="telephone=no" />
-        <meta name="msapplication-tap-highlight" content="no" />
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-        <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
-        <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
-        <!-- Good default declaration:
-        * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
-        * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
-        * Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
-            * Enable inline JS: add 'unsafe-inline' to default-src
-            * Enable eval(): add 'unsafe-eval' to default-src
-        * Create your own at http://cspisawesome.com
-        -->
-        <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
-        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
-        <link rel="stylesheet" type="text/css" href="../css/index.css" />
-        <title>Topics</title>
-    </head>
+    <head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+    <!-- Good default declaration:
+    * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+    * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+    * Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+    * Enable inline JS: add 'unsafe-inline' to default-src
+    * Enable eval(): add 'unsafe-eval' to default-src
+    * Create your own at http://cspisawesome.com
+    -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+    <title>Topics</title>
+</head>
 
 <script type="text/javascript" src="cordova.js"></script>
 <script type="text/javascript" src="../js/index.js"></script>
@@ -25,60 +26,51 @@
     app.initialize();
 </script>
 
-
-
-
 <!--===========================================================================
 ============================================================================-->
-
-
-<div id="myNav" class="overlay">
-        <a href="#" class="closebtn" onclick="closeNav()">&times;</a>
-        <div class="overlay-content">
-          <a href="../about/about.html">About</a>
-          <a href="../index.html">Home</a>
-          <a href="#">Settings</a>
-        </div>
-      </div>
-    
-    <nav class="navbar">
-        <div id="menuIcon">
-                <img src="../img/menuIcon.svg" alt="menuIcon" id="icon" onclick="openNav()">
-        </div>
-    </nav>
-
-
-
-<body>
-
-    
-<div class="app">
-    <h1>Topics</h1>
-    <h3>Please select a topic</h3>
-
-<div class="container">
-
-<div class="holder">
-    <div class="box"><a href="topics-socialmedia.html">Social Media</a></div>
-    <div class="box"><a href="#">Bullying</a></div>
-</div>
-<div class="holder">
-    <div class="box"><a href="#">Personal Info</a></div>
-    <div class="box"><a href="#">Messenger</a></div>  
+<div class="navbar">
+    <div class="hamburger" id="hamburger" onclick="toggleSidenav();">
+        <h4>Topics</h4>
+        <div></div>
+        <div></div>
+        <div></div>
     </div>
+<nav>
+    <div class="links">
+        <a href="../mainMenu.html">Home</a>
+        <a href="../about/about.html">About</a>
+    </div>
+</nav>
+</div>
+
+<body>  
+<div class="app">
+<div class="choice">
+    <a href="topics-socialmedia.html">
+        <div class="panel">
+            <div class="w3-left"><h4>Social Media</h4></div>
+        </div>
+    </a>
+</div>
+<div class="choice">
+    <a href="topics-bullying.html">
+        <div class="panel">
+            <div class="w3-left"><h4>Bullying</h4></div>
+        </div>
+    </a>
+</div>
+<div class="choice">
+    <a href="topics-messenger.html">
+        <div class="panel">
+            <div class="w3-left"><h4>Messenger</h4></div>
+        </div>
+    </a>
 </div>
 </div> 
-
-
-
-
-
-
 
 <footer class="footer">
     <img src="../img/back-arrow.svg" id="back-arrow" onclick="goBack()">
 </footer>
-
 
 </body>
 

@@ -1,0 +1,107 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+        <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+        <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+        <!-- Good default declaration:
+        * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+        * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+        * Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+            * Enable inline JS: add 'unsafe-inline' to default-src
+            * Enable eval(): add 'unsafe-eval' to default-src
+        * Create your own at http://cspisawesome.com
+        -->
+        <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
+        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+        <link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+        <title>Cyberbullying</title>
+    </head>
+
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="../js/index.js"></script>
+<script type="text/javascript">
+    app.initialize();
+</script>
+
+
+
+
+<!--===========================================================================
+============================================================================-->
+
+
+<div class="navbar">
+    <div class="hamburger" id="hamburger" onclick="toggleSidenav();">
+        <h3>Cyberbullying</h3>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+<nav>
+    <div class="links">
+        <a href="../mainMenu.html">Home</a>
+        <a href="../about/about.html">About</a>
+    </div>
+</nav>
+</div>
+
+
+<body>    
+<div class="app">
+
+<div class="topic">
+    <p>Cyberbulling is a form of bullying that takes place online, be it on social media, through instant messengers
+        , forums and so on. Any form of online space that offers communication between people can be a place
+        where forms of cyberbullying take place. This kind of bullying can come in many forms, such as:</p>
+
+    <ul id="cyberbullying-list">
+        <li><span class="firstWord">Harrasment</span> - This is where one, or multiple people send rude, offensive or abusive messages to a person.
+            They may also send this as comments on content someone has uploaded.</li>
+        <li><span class="firstWord">Slander/Denigration</span> - When someone posts information online about another person, which is untrue, with a
+            purpose of making them look bad and having an adverse effect on their reputation. This is typically in the 
+            form of rumors and gossip.</li>
+        <li><span class="firstWord">Trolling</span> - This is where someone will purposefully say something controversial or mean in an attempt to
+            get another into an online argument, and it is done typically to get a reaction out of people and cause
+            distress.</li>
+    </ul>
+
+    <img src="../img/cyberbullying.png" alt="cyberbullying-logo">
+
+    <p>If you are on the recieving end of any form of online bullying, there are a number of different approaches
+    you can take to mitigate and finally stop any abuse you may be on the recieving end of:</p>
+
+    <ul id="cyberbullying-list">
+        <li><span class="firstWord">Tell someone</span> - You do not have to sit their in silence, reach out to the people in your life, be it parents,
+            friends, your teacher, and even the police can offer you help and guidance in how best to proceed to deal with
+            cyberbullying</li>
+        <li><span class="firstWord">Reporting</span> - If someone is cyberbullinyg you on a social media platform, it is most likely the case that they are 
+            going aginst the terms of service. Therefore you should use the available options to report them to the social network,
+            whether it be Facebook, Twitter, and so on</li>
+        <li><span class="firstWord">Ignore</span> - This method is best used when you are only recieving light name calling or such, as chances are the person is trying
+           to troll you and get a reaction from you. It is suggested in these case to "not feed the trolls" and ignore their attempts
+           to get a rise out of you</li>
+    </ul>
+
+    <p>If you feel like you need to talk to someone, we have some useful links you can use to get help</p>
+
+    <div class="choice">
+    <a href="topics-bullying2.html">
+        <div class="panel-bottom">
+            <div class="w3-left"><h4>Useful Links</h4></div>
+        </div>
+    </a>
+    </div> 
+</div>
+</div>
+</div> 
+
+
+<footer class="footer">
+    <img src="../img/back-arrow.svg" id="back-arrow" onclick="goBack()">
+</footer>
+
+</body>
+</html>

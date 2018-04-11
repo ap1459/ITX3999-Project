@@ -59,6 +59,14 @@ function goBack() {
     window.history.back();
 }
 
+window.onscroll = function() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById('sidenav-active').style.visibility="hidden";
+  }
+}
+
+
+
 
 // QUIZ
  // Load google charts
