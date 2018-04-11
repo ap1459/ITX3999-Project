@@ -30,7 +30,7 @@ Safety online has never been more important; from ever-emerging and ever-evolvin
 
 \newpage
 
-\section{Existing applications}
+\section{Literature Review}
 
 'DigitalCitizen' is the first result in the iOS app store when using the search term 'online safety'. This app, from its iOS store description tells us that it is designed for middle to high school students, with educational material regarding how to stay safe online, the ethical use of the internet and how students can deal with cyberbullying. It makes use of videos, games and quizzes also. It is targeted and developed for a US-based audience, which becomes apparent from analysing their developers website. This app however can only be fully accessed with an authentication code from a school; Locking the app behind an authentication code means that it is denying access to people who may be interested in learning, even those who perhaps are currently in school, but their respective school does not utilise the app in their curriculum, hence no activation code. \cite{noauthor_digitalcitizen_nodate} \\
 
@@ -65,7 +65,7 @@ Safety online has never been more important; from ever-emerging and ever-evolvin
 \end{figure} 
 
 
-\section{Existing websites}
+\subsection{Existing websites}
 
 Simply typing 'online safety' into Google, results in a plethora of resources, the first page of results having links to the NSPCC, BBC, and many other organisations websites. A focus seems to be applied to children online safety as opposed to general online safety, if one goes by the Google search results on the first page. \\
 \indent	The UK Safer Internet Centre is a partnership of three organisations: Childnet Internatoinal, Internet Watch Foundation and SWGfL (South West Grid for Learning). This partnership as appointed by the European Commission and they have three core functions, which are - 
@@ -119,6 +119,10 @@ Regarding their webpage section on young persons, they very clearly highlight ke
 
 
 
+%This command makes a subsubsubsection possible
+\newcommand{\subsubsubsection}[1]{\paragraph{#1}\mbox{}\\}
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
 
 
 
@@ -126,8 +130,7 @@ Regarding their webpage section on young persons, they very clearly highlight ke
 
 
 
-
-\section{Development technologies}
+\subsection{Development technologies}
 
 When it comes to constructing the proposed app, there are numerous options available, falling into the two key categories of native and hybrid. Both options will be explored and a conclusion come to as to which would be most suitable for this particular project. Since the proposed app will rely heavily on utilising an engaging, intuitive and straightforward user interface, this is the function that I will be focusing on and comparing across all available options of implementation. \\
 
@@ -166,7 +169,7 @@ Using either native or hybrid app development technology will not be without the
 	\item \textbf{Programming language} - Creating a native application requires that one is knowledgable in the respective native programming language. Android studio applications requires that the JAVA programming language is used and iOS requires either that Swift or Objectice-C is used. Hybrid apps on the other hand only require that HTML, CSS and Javascript are used, which are arguably far simpler to implement than their native counterparts.
 \end{itemize}
 
-\section{Literature Review Conclusion}
+\subsection{Literature Review Conclusion}
 
 From the experience gained from utilising both native and hybrid development softwares, and comparing the features they have to offer, I believe that PhoneGaps functionality felt most suitable for developing the proposed project.
 
@@ -188,22 +191,22 @@ The proposed app will need to be able to deliver informative and practical infor
 \indent	In order to attain meaningful and useful information in regard to the proposed app, three individuals will be asked, amongst many questions, what they believe the requirements should be and what they would expect from such an app, as opposed to asking perhaps hundreds of individuals or so, where due to time constraints it would be both impractical and impossible to get any meaningful feedback. Getting the requirements from a smaller group of people means that it will allow for a more in-depth and focused discussion which would simply not be possible with a larger number of people due to the aforementioned constraints.
 
 
-\section{User Responses}
+\subsection{User Responses}
 
 The following section will discuss the responses received from both the charities emailed and the individuals that were talked to in order to obtain the user requirements.
 
-\subsection{Charity Responses}
+\subsubsection{Charity Responses}
 	
 Having emailed several charities in regards to the proposed app, only a couple replied and these charities focused mainly on the younger demographic of users such as primary to secondary school; the UK Safer Internet Centre thought that targeting an app to a younger demographic may be difficult as it is not viewed as particularly 'cool' amongst peers to use such an app. They even suggested that if such an app were to be utilised by school kids, it could even make them a target for bullying. Though they recognised the importance of the topic and suggested if a creative spin were to be put on such an educational app, it may find better success. Mind, a UK based charity focusing on helping those with mental health problems, responded stating that they found it a very worthwhile pursuit, but unfortunately were unable to offer any detailed critique or advice, as they said they do not have the resources to help students with projects.
 
-\subsection{User Requirements}
+\subsubsection{User Requirements}
 
 In order to gain the user requirements, discussions were had with three individuals and the responses gathered provided for a refreshing and interesting insight into other individuals thoughts on the proposed app, in regard to how it should operate, what it needs to do and so on. Firstly, users were asked if they had experienced any form of cyberbullying or a hack, and 2 out of 3 said that they had. It was then asked if they knew what to do in the event of a hack, and if not, what resource would they use in order to find out what appropriate steps to take; all the individuals stated they would utilise Google in order to find an appropriate answer and also stated they have no knowledge of what to do without finding the answers searching online. \\
 \indent	Users were asked if they made use of any form of security software or related software to the proposed app, and only one respondent used an anti-virus software and this user had a Microsoft operating system, whilst the other two did not use any kind of specialist software, and were using Mac computers and believed such software was unnecessary. \\
 \indent	In order to better understand user experience with apps, it was asked what irritates users most when it comes to using an app. All expressed they disliked being made to sign up using their Facebook or email, and two respondents did not like having to create an account with an app and provide their email, as they did not appreciate the lengthy process and the idea of numerous newsletters and emails that could be sent to their inboxes. \\
 \indent	An interesting point was brought in the discussions, where one respondent made note that whilst they would be more inclined to use a quick Google search to find an answer, they would be more interested in using an app such as the proposed app, if it also included the latest news in regard to online security, as well as news on the latest high-profile hacks, such as banks, companies, etc that could perhaps be relevant to them. 
 	
-\subsection{Look \& Feel}
+\subsubsection{Look \& Feel}
 	
 Discussions were had on how the proposed app should look and how it should feel, and as a result it was learned that users appreciated apps that make use of a monochromatic, simple colour system, as opposed to multiple colours or a design that looks out-of-place, as this could result in the app looking unprofessional as well as lack general aesthetic. When users were questioned on how they believe the balance of on-screen information should be, they felt as if there should be a fine balance, where enough information should be on screen that is appropriate; therefore not too much, nor too little information must be on screen at any one time, but rather enough for them to understand. \\
 	
@@ -217,7 +220,7 @@ To summarise, the key user requirements are
 	\item The app should have a professional and and high-quality look/aesthetic 
 \end{itemize}
 	
-\section{Design \& Implementation}
+\subsection{Design \& Implementation}
 
 Based upon the received feedback, a paper prototype will be created using the JUSTINMIND service, which is a high-fidelity prototyping tool for mobile and web applications. Using this software will allow for a high-quality visual representation of what the app will look like, as well as to help showcase the basic functionality, in terms of navigation through the app. The app has been developed with simplicity and usability in mind, as cluttering the page with too many options, images or such may detract from the experience and lead to frustration if the intended user cannot find what they are looking for, or perform the task they wish to carry out. The screenshots provided are an indication as to what the working prototype will look like, though they may be subject to minor changes throughout the next stage of development process where a working prototype will be produced, using PhoneGap. \\
 \indent	The following section will go over and describe a number of screenshots of the paper prototype, there is however a public link available where it can be accessed in full, clicking here - 
@@ -275,7 +278,7 @@ Figure~\ref{fig:SocialMedia2} is the subsequent social media page, where users w
 Figure~\ref{fig:News} shows us the proposed look of the page which will contain all the latest news regarding IT security, the latest on any recent database hacks, and so on. Users will be able to scroll down to view all the latest news. This style was chosen as it is straightforward, compact and allows the user to simply scroll through and read through all the relevant news stories.
 
 
-\section{Evaluation}
+\subsection{Evaluation}
 
 Having created a paper prototype, it would now be suitable and beneficial to review it with the aforementioned users and get feedback in order to assess if the prototype is what they expected, and whether any changes or improvements need to be made to the design itself or even the project scope. \\
 \indent	The three previous individuals used to attain the user requirements were then called upon once more to evaluate the paper prototype, and they did this by viewing the app through JustInMind's 'View on device' feature which allowed for the app to be used on a supplied iPhone 5S as if it were a functioning and real app. Users were told that the app was only a prototype and were then asked to try out the app for themselves and navigate around, assess the available features and whether they believe them to be good or if they believed they require more work. \\
@@ -297,13 +300,22 @@ The users stated that they liked the name of the app; they said that found it pa
 \newpage
 
 
+
+
+
+
+
+
+
+
+
 %% SECOND ITERATION ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 \section{Second iteration}
 
 At this stage, a basic working-prototype of the application has been created. It has limited functionality, in terms of navigation and such, as the full functionality will not be implemented until the third and final iteration. It would now be beneficial to ask the same individuals who gave feedback before, to give their thoughts on the current state of the application, so it can be evaluated and if any changes or fixes are necessary, they can be made. The application has been made making use of PhoneGap and HTML, CSS and JavaScript. 
 
-\section{User Requirements}
+\subsection{User Requirements}
 
 At this stage in the second iteration, it would be suitable to take the evaluation from the previous iteration in order to identify what the user requirements for this stage are. The following are the requirements as specified in the previous evaluation - 
 
@@ -315,7 +327,7 @@ At this stage in the second iteration, it would be suitable to take the evaluati
 
 These will be taken into account when designing and implementing the application in the following section.
 
-\section{Design \& Implementation}
+\subsection{Design \& Implementation}
 
 The prototype application has been created utilising PhoneGap, and has been programmed in HTML, CSS and JavaScript. On each and every HTML page, within the code is some default code that is included to allow fro PhoneGap functionality, and this is code included in the head tag. There are also some default CSS code within the stylesheet that sets out the default look for the app, as well as how the app looks when it connects to the server and when the user manually refreshes the page, via a three finger tap to the screen. The JavaScript file for the project also includes some default code that allows for our mobile application to work with the PhoneGap server. A handful of API's have also been made use-of, including one for the RSS feed, as well as Google Charts API which allows for the creation of pie charts to show the results of quizzes the user has completed. The screenshots shown have been taken whilst the application has been in use on an iPhone 5S.
 
@@ -392,7 +404,7 @@ Figure~\ref{fig:Quiz3} shows us what the current state of the graphical results 
 
 
 
-\section{Evaluation}
+\subsection{Evaluation}
 
 The users were once again called upon to give their thoughts regarding the application at this stage. Users were given the opportunity to use the app via a supplied iPhone 5, and were asked if they felt the app had met, or at least partially met the requirements that were discussed and agreed upon in the first iteration, and these were -
 
@@ -433,7 +445,7 @@ For task 1, users were all able to find the relevant news section with ease, as 
 
 The evaluation given by the respondents in the previous section have been listened to and implemented in order to create the third and final iteration of the online safety mobile application. Some changes have been made in regards to the layout also, to make it more in line with modern mobile applications, as well as to improve the overall user experience.
 
-\section{User Requirements} 
+\subsection{User Requirements} 
 
 For the final round of user requirements, the points made by the respondents in the evaluation section of the previous iteration will be taken into account, in order to identify what the requirements are. The following points are the requirements as specified in the previous evaluation - 
 
@@ -445,7 +457,7 @@ For the final round of user requirements, the points made by the respondents in 
 
 Feedback from the project supervisor also stressed that improvements to the look and feel of the user interface would be beneficial, as at its stage in the second iteration, it was perhaps too plain, and it was stated that a simple design, need not be plain as such. Another key point was made that, whilst the extra features being implemented in, such as the RSS feed are a nice addition, the purpose of the application must not be forgotten, overlooked, or take a back-seat and the majority of the focus should be on delivering what was specified the app should deliver, at the beginning of this projects inception.
 
-\section{Design \& Implementation}
+\subsection{Design \& Implementation}
 
 Just like the second iteration, the following screenshots will demonstrate what the application now looks like on an iPhone 5S. The colour scheme and theme has been kept the same though some changes have been made.
 
@@ -510,7 +522,7 @@ Some changes were made in order to accommodate the application in landscape mode
 
 The topic pages were refined and had extra design added to them in order to make them look better and not just simply walls of text. Utilising the same colour scheme in order to keep continuity within the application
 
-\section{Evaluation}
+\subsection{Evaluation}
 
 The users were called upon one final time to give feedback regarding the application at this final stage. The users were once again given the opportunity to use the application via a supplied iPhone 5, and were asked if they felt the app had met, or at least partially met the requirements that were discussed and agreed upon in the first iteration, and these were -
 
