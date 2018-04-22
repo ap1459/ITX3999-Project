@@ -7,4 +7,4 @@ This repository includes -
 * Project proposal
 * Literature review
 * Final project report
-* www folder containing OCSAR (The mobile application)
+* www folder containing OSCAR (The mobile application)
