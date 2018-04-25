@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8" />
@@ -30,14 +31,8 @@
     app.initialize();
 </script>
 
-
-
-
-
-
 <!--===========================================================================
 ============================================================================-->
-
 
 <div class="navbar">
     <div class="hamburger" id="hamburger" onclick="toggleSidenav();">
@@ -53,8 +48,6 @@
     </div>
 </nav>
 </div>
-
-
 
 <body>
     <form id="form1" onsubmit="submit()" >
@@ -93,9 +86,7 @@
         </fieldset>
 </body>
 
-
 <script>
-
 document.getElementById("form1").onsubmit=function() {
 
     question1 = parseInt(document.querySelector('input[name = "question1"]:checked').value);
@@ -151,4 +142,8 @@ document.getElementById("form1").onsubmit=function() {
 } // End submit function
 
 </script>
+
+<footer class="footer">
+        <img src="../img/back-arrow.svg" id="back-arrow" onclick="goBack()">
+</footer>
 </html>

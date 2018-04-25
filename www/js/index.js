@@ -49,10 +49,13 @@ var app = {
 
 };
 
+// The code above is the default code that comes with PhoneGap in order to allow it
+// to work in conjunction with the PhoneGap server
 
-//==============================================================================
-//==============================================================================
 
+
+// The code below was written by me, with the exception of the Google Charts script, 
+// which was adapated to work in conjunction with my Quiz sections
 
 //Method for back button
 function goBack() {
@@ -67,9 +70,8 @@ window.onscroll = function() {
 
 
 
-
-// QUIZ
- // Load google charts
+// QUIZ - Utilizing Google Chart API
+// Load google charts
  google.charts.load('current', {'packages':['corechart']});
  google.charts.setOnLoadCallback(drawChart);
 
@@ -82,7 +84,7 @@ window.onscroll = function() {
     chart.draw(data, options);
 }
 
-// Pie chart for 4/4
+// Pie chart for 4/4 marks
     function piechart1() {
     var data = [
         {x:"Correct", value: 4},
@@ -103,7 +105,7 @@ window.onscroll = function() {
     chart.draw();
 }
 
-// Pie chart for 3/4
+// Pie chart for 3/4 marks
 function piechart2() {
     var data = [
         {x:"Correct", value: 3},
@@ -124,7 +126,7 @@ function piechart2() {
     chart.draw();
 }
 
-// Pie chart for 2/4
+// Pie chart for 2/4 marks
 function piechart3() {
     var data = [
         {x:"Correct", value: 2},
@@ -145,7 +147,7 @@ function piechart3() {
     chart.draw();
 }
 
-// Pie chart for 1/4
+// Pie chart for 1/4 marks
 function piechart4() {
     var data = [
         {x:"Correct", value: 1},
@@ -166,7 +168,7 @@ function piechart4() {
     chart.draw();
 }
 
-// Pie chart for 0/4
+// Pie chart for 0/4 marks
 function piechart5() {
     var data = [
         {x:"Correct", value: 0},
