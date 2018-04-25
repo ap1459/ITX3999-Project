@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+        <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+        <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+        <!-- Good default declaration:
+        * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+        * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+        * Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+            * Enable inline JS: add 'unsafe-inline' to default-src
+            * Enable eval(): add 'unsafe-eval' to default-src
+        * Create your own at http://cspisawesome.com
+        -->
+        <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
+        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+        <link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+        <title>Facebook</title>
+    </head>
+
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="../js/index.js"></script>
+<script type="text/javascript">
+    app.initialize();
+</script>
+
+<!--===========================================================================
+============================================================================-->
+
+<div class="navbar">
+    <div class="hamburger" id="hamburger" onclick="toggleSidenav();">
+        <h4>Facebook</h4>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+<nav>
+    <div class="links">
+        <a href="../mainMenu.html">Home</a>
+        <a href="../about/about.html">About</a>
+    </div>
+</nav>
+</div>
+
+<body>    
+<div class="app">
+
+<div class="topic">
+    <p> Facebook was founded back in February 2004, by a 19 year old Mark Zuckerberg. It was actually
+        called "thefacebook.com" at first! Over time its user base grew, and is currently at an astonishing 2.2
+        billion users world-wide! People use Facebook for a whole host of reasons, maybe a page to promote their business,
+        from musical artists, to well-known corporations, or simply the average joe wanting to connect and stay in touch
+        with their friends. There are of course risks to using a social media platform and below we will give you some
+        top-tips to help you stay safe when using Facebook!</p>
+
+        <h5>Manage your privacy settings!</h5>
+        <p>Facebook offers a plethora of tools within its settings to help you to decide how you wish to
+            experience Facebook. First, we need to go to settings, as you can see in the picture.</p>
+
+            <img src="../img/facebook-settings1.png" alt="Facebook Logo">
+
+        <p>Once there you'll be able to see a number of options relating to general privacy, in there you
+            can choose who you want to share your posts with, limiting it to just friends, or even blocking
+            certain people from seeing your posts. If there is someone you do not want to be able to see your posts,
+            you may block them here. You can also choose who can send your friend requests, 
+            and this can be limited to only those who are friends of your friends, this can help against
+            you recieving friend requests from people you do not know, which you certainly should not accept!</p>
+
+    <div class="keyPoints">
+        <h5>Key Safety Points</h5>
+        <ul>
+            <li>Don't accept friends requests from someone you don't know</li>
+            <li>Never share your password or sensitive information</li>
+            <li>Think about what you are posting before you hit send</li>
+            <li>If you come across content that looks suspicious, report it via Facebook</li>
+        </ul>
+    </div>
+</div>
+
+</div>
+
+<footer class="footer">
+    <img src="../img/back-arrow.svg" id="back-arrow" onclick="goBack()">
+</footer>
+
+</body>
+</html>

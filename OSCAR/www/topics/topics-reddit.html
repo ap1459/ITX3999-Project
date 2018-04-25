@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+        <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+        <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+        <!-- Good default declaration:
+        * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+        * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+        * Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+            * Enable inline JS: add 'unsafe-inline' to default-src
+            * Enable eval(): add 'unsafe-eval' to default-src
+        * Create your own at http://cspisawesome.com
+        -->
+        <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
+        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+        <link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+        <title>Reddit</title>
+    </head>
+
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="../js/index.js"></script>
+<script type="text/javascript">
+    app.initialize();
+</script>
+
+<!--===========================================================================
+============================================================================-->
+
+<div class="navbar">
+    <div class="hamburger" id="hamburger" onclick="toggleSidenav();">
+        <h4>Reddit</h4>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+<nav>
+    <div class="links">
+        <a href="../mainMenu.html">Home</a>
+        <a href="../about/about.html">About</a>
+    </div>
+</nav>
+</div>
+
+
+<body>    
+<div class="app">
+<div class="topic">
+    <img src="../img/reddit-logo.png" alt="Reddit Logo" id="topic-reddit-logo">
+    <p>Reddit was found in 2005 by Steve Huffman and Alexis Ohanian, who were University of Virginia roommates. 
+        Whilst not being a "true" form of social media still has many aspects that would put it broadly in to that 
+        category. These include messaging, comments, discussion, and posting links/photos and videos. Whilst there is no "like"
+        system similiar to Facebook, there is upvotes and downvotes, where users will upvote if they like the content, making it more
+        likely to appear to others, and downvoting which is essentially the opposite. On here are whats known as "subreddits", which
+        cover a myriad of different topics, ranging from computing, science, news, movies, fitness, video games, and so on. As of February
+        2018, Reddit enjoys around 542 million monthly visitors!</p>
+
+    <div class="keyPoints">
+        <h5>Key Safety Points</h5>
+        <ul>
+            <li>Never share your password or sensitive information</li>
+            <li>Think about what you are posting before you hit send</li>
+            <li>If you come across content that looks suspicious, report it</li>
+        </ul>
+    </div>
+
+</div>
+</div>
+
+<footer class="footer">
+    <img src="../img/back-arrow.svg" id="back-arrow" onclick="goBack()">
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+        <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+        <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+        <!-- Good default declaration:
+        * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+        * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+        * Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+            * Enable inline JS: add 'unsafe-inline' to default-src
+            * Enable eval(): add 'unsafe-eval' to default-src
+        * Create your own at http://cspisawesome.com
+        -->
+        <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
+        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+        <link rel="stylesheet" type="text/css" href="../css/stylesheet.css" />
+        <title>Messenger Quiz</title>
+    </head>
+
+<!--Google Pie Chart API below -->
+<script src="https://cdn.anychart.com/js/8.0.1/anychart-core.min.js"></script>
+<script src="https://cdn.anychart.com/js/8.0.1/anychart-pie.min.js"></script>
+
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="../js/index.js"></script>
+<script type="text/javascript">
+    app.initialize();
+</script>
+
+<!--===========================================================================
+============================================================================-->
+
+<div class="navbar">
+    <div class="hamburger" id="hamburger" onclick="toggleSidenav();">
+        <h4>Messenger</h4>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+<nav>
+    <div class="links">
+        <a href="../mainMenu.html">Home</a>
+        <a href="../about/about.html">About</a>
+    </div>
+</nav>
+</div>
+
+<body>
+    <form id="form1" onsubmit="submit()" >
+        <fieldset>
+            <h2>If a stranger asks for personal information, you should...</h2>
+            <label><input type="radio" name="question1" value="0" id="var_string" />Give them yours</label>
+            <label><input type="radio" name="question1" value="0" id="var_join" />Post on your social media so it can easily be seen</label>
+            <label><input type="radio" name="question1" value="1" id="var_info" />Never give out your personal details</label>
+            <label><input type="radio" name="question1" value="0" id="var_condition"/>Ask for theirs first</label>
+            <div id="rightOrWrong"></div>
+
+            <h2>If a stranger wants to meet you in person, you should...</h2>
+            <label><input type="radio" name="question2" value="1" id="var_string" />Refuse, never meet anyone you don't know</label>
+            <label><input type="radio" name="question2" value="0" id="var_join" />Go ahead and arrange a day</label>
+            <label><input type="radio" name="question2" value="0" id="var_info" />Let a friend know before you go to see them</label>
+            <label><input type="radio" name="question2" value="0" id="var_condition"/>Ask to meet at your own house</label>
+            <div id="rightOrWrong2"></div>
+
+            <h2>In regard to your messenger profile, you should...</h2>
+            <label><input type="radio" name="question3" value="0" id="var_string"/>Keep it open for anyone to see</label>
+            <label><input type="radio" name="question3" value="1" id="var_join" />Restrict it so only friends you know can see</label>
+            <label><input type="radio" name="question3" value="0" id="var_info"/>Post your number on social media for anyone to add</label>
+            <label><input type="radio" name="question3" value="0" id="var_condition"/>Just leave it on default settings</label>
+            <div id="rightOrWrong3"></div>
+
+            <h2>You should consider if your message is...</h2>
+            <label><input type="radio" name="question4" value="1" id="var_string" />Appropriate, and would be happy with anyone seeig it</label>
+            <label><input type="radio" name="question4" value="0" id="var_join" />Grammatically correct</label>
+            <label><input type="radio" name="question4" value="0" id="var_info" />Easy to understand</label>
+            <label><input type="radio" name="question4" value="0" id="var_condition"/>Concise and to the point</label>
+            <div id="rightOrWrong4"></div>
+
+            <button type="submit" value="Submit" onsubmit="submit">Submit</button>
+            <p>You scored: <span id="grade">__</span></p>
+            <div id="piechart"></div>
+        </fieldset>
+
+</body>
+
+<script>
+
+document.getElementById("form1").onsubmit=function() {
+
+    question1 = parseInt(document.querySelector('input[name = "question1"]:checked').value);
+    question2 = parseInt(document.querySelector('input[name = "question2"]:checked').value);
+    question3 = parseInt(document.querySelector('input[name = "question3"]:checked').value);
+    question4 = parseInt(document.querySelector('input[name = "question4"]:checked').value);
+   
+    result = question1 + question2 + question3 + question4; 
+    document.getElementById("grade").innerHTML = result;
+
+    // Check result
+    if (result == 4) {result2 = piechart1()};
+    if (result == 3) {result2 = piechart2()};
+    if (result == 2) {result2 = piechart3()};
+    if (result == 1) {result2 = piechart4()};
+    if (result == 0) {result2 = piechart5()};
+
+// Validation - Check if answer is correct or not, and let person know
+
+    if (question1 == 1) {
+        document.getElementById("rightOrWrong").innerHTML = ("Correct!");
+        document.getElementById("rightOrWrong").style.color = "green";
+    } else {
+        document.getElementById("rightOrWrong").innerHTML = ("Wrong!");
+        document.getElementById("rightOrWrong").style.color = "red";
+    }
+
+    if (question2 == 1) {
+        document.getElementById("rightOrWrong2").innerHTML = ("Correct!");
+        document.getElementById("rightOrWrong2").style.color = "green";
+    } else {
+        document.getElementById("rightOrWrong2").innerHTML = ("Wrong!");
+        document.getElementById("rightOrWrong2").style.color = "red";
+    }
+
+    if (question3 == 1) {
+        document.getElementById("rightOrWrong3").innerHTML = ("Correct!");
+        document.getElementById("rightOrWrong3").style.color = "green";
+    } else {
+        document.getElementById("rightOrWrong3").innerHTML = ("Wrong!");
+        document.getElementById("rightOrWrong3").style.color = "red";
+    }
+
+    if (question4 == 1) {
+        document.getElementById("rightOrWrong4").innerHTML = ("Correct!");
+        document.getElementById("rightOrWrong4").style.color = "green";
+    } else {
+        document.getElementById("rightOrWrong4").innerHTML = ("Wrong!");
+        document.getElementById("rightOrWrong4").style.color = "red";
+    }
+ 
+    return false; // required to not refresh the page
+} // End submit function
+
+</script>
+
+<footer class="footer">
+        <img src="../img/back-arrow.svg" id="back-arrow" onclick="goBack()">
+</footer>
+
+</html>
